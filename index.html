@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
 	<title>smoelentrainer</title>
 </head>
 <body>
@@ -13,6 +12,51 @@
 		<button type="button" id="startbutton" class="btn btn-dark" onclick="window.location.href='trainer.html';"><h2>klik om te beginnen</h2>
 			<img src="img/groepfoto.png" id="backgroundImg" class="img-fluid" alt="Responsive image"></button>  
 	</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to add a new row at the first position of the table and then add cells and content.</p>
+
+<table id="myTable">
+  <tr>
+    <td>Row1 cell1</td>
+    <td>Row1 cell2</td>
+  </tr>
+  <tr>
+    <td>Row2 cell1</td>
+    <td>Row2 cell2</td>
+  </tr>
+  <tr>
+    <td>Row3 cell1</td>
+    <td>Row3 cell2</td>
+  </tr>myTable
+</table>
+<br>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = "NEW CELL1";
+  cell2.innerHTML = "NEW CELL2";
+}
+</script>
 
 </body>
 </html>
