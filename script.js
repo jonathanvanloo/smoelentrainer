@@ -20,22 +20,9 @@ var spelers = [["img/2020-06-03 14_41_21-Selectie 2018 – 2019 – Feyenoord in
 ["img/2020-06-03 14_51_47-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Kenneth Vermeer"], 
 ["img/2020-06-03 14_52_15-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Ramon ten Hove"]];
 
-
-document.getElementById("img1").src = spelers[0][0];
-document.getElementById("name1").innerHTML = spelers[0][1];
-document.getElementById("img2").src = spelers[1][0];
-document.getElementById("name2").innerHTML = spelers[1][1];
-document.getElementById("img3").src = spelers[2][0];
-document.getElementById("name3").innerHTML = spelers[2][1];
-document.getElementById("img4").src = spelers[3][0];
-document.getElementById("name4").innerHTML = spelers[3][1];
-document.getElementById("img5").src = spelers[4][0];
-document.getElementById("name5").innerHTML = spelers[4][1];
-
-// document.write('<table>')
-
-// for (var i = 0; i < spelers.length; i++) {
-// 	document.write('<tr><td>' + spelers[i] + '</tr></td>')
-// }
-
-// document.write('</table>')
+for (var i = 1; i < 6; i++) {
+const randomElement = spelers[Math.floor(Math.random() * spelers.length)];
+console.log(randomElement)
+document.getElementById("img" + i).src = randomElement[0];
+document.getElementById("name" + i).innerHTML = randomElement[1];
+}
