@@ -26,3 +26,30 @@ console.log(randomElement)
 document.getElementById("img" + i).src = randomElement[0];
 document.getElementById("name" + i).innerHTML = randomElement[1];
 }
+
+function colorchange(id) {
+    var background = document.getElementById(id).style.backgroundColor;
+    document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
+    // document.getElementById(id).style.borderColor = "black";
+    if (background !== "rgb(0,191,255)") {
+        document.getElementById(id).style.background = "rgb(0,191,255)";
+    } else if (background == "rgb(0,191,255)") {
+        document.getElementById(id).style.background = "rgb(255, 255, 255)";
+    }
+}
+
+        //     /* Create style document */ 
+        //     var css = document.createElement('style'); 
+        //     css.type = 'text/css'; 
+          
+        //     if (css.styleSheet)  
+        //         css.styleSheet.cssText = styles; 
+        //     else  
+        //         css.appendChild(document.createTextNode(styles)); 
+              
+        //     /* Append style to the tag name */ 
+        //     document.getElementsByid(id)[0].appendChild(css);
+          
+        // /* Set the style */ 
+        // var styles = 'h2 { color: green }'; 
+        // // styles += ' body { text-align: center }'; 
