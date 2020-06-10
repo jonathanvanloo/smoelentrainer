@@ -1,5 +1,6 @@
 
-var spelers = [["img/2020-06-03 14_41_21-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Nicolai Jorgensen"], 
+var spelers = 
+[["img/2020-06-03 14_41_21-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Nicolai Jorgensen"], 
 ["img/2020-06-03 14_43_03-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Robin van Persie"], 
 ["img/2020-06-03 14_43_29-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Steven Berghuis"], 
 ["img/2020-06-03 14_44_51-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Luis Sinisterra"], 
@@ -20,36 +21,53 @@ var spelers = [["img/2020-06-03 14_41_21-Selectie 2018 – 2019 – Feyenoord in
 ["img/2020-06-03 14_51_47-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Kenneth Vermeer"], 
 ["img/2020-06-03 14_52_15-Selectie 2018 – 2019 – Feyenoord in Beeld.png", "Ramon ten Hove"]];
 
-for (var i = 1; i < 6; i++) {
-const randomElement = spelers[Math.floor(Math.random() * spelers.length)];
-console.log(randomElement)
-document.getElementById("img" + i).src = randomElement[0];
-document.getElementById("name" + i).innerHTML = randomElement[1];
-}
+const randomElement1 = spelers[Math.floor(Math.random() * spelers.length)];
+document.getElementById("img1").src = randomElement1[0];
+document.getElementById("name1").innerHTML = randomElement1[1];
+console.log(randomElement1)
 
-function colorchange(id) {
+const randomElement2 = spelers[Math.floor(Math.random() * spelers.length)]
+document.getElementById("img2").src = randomElement2[0];
+document.getElementById("name2").innerHTML = randomElement2[1];
+console.log(randomElement2)
+
+const randomElement3 = spelers[Math.floor(Math.random() * spelers.length)];
+document.getElementById("img3").src = randomElement3[0];
+document.getElementById("name3").innerHTML = randomElement3[1];
+console.log(randomElement3)
+
+const randomElement4 = spelers[Math.floor(Math.random() * spelers.length)];
+document.getElementById("img4").src = randomElement4[0];
+document.getElementById("name4").innerHTML = randomElement4[1];
+console.log(randomElement4)
+
+const randomElement5 = spelers[Math.floor(Math.random() * spelers.length)];
+document.getElementById("img5").src = randomElement5[0];
+document.getElementById("name5").innerHTML = randomElement5[1];
+console.log(randomElement5)
+
+var randomElement = [randomElement1, randomElement2, randomElement3, randomElement4, randomElement5]
+console.log(randomElement)
+var dubbel =  spelers.filter(function(randomElement) {
+	return randomElement.img[1] == "Robin van Persie";
+});
+
+function click(id) {
     var background = document.getElementById(id).style.backgroundColor;
     document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
     // document.getElementById(id).style.borderColor = "black";
     if (background !== "rgb(0,191,255)") {
-        document.getElementById(id).style.background = "rgb(0,191,255)";
+        document.getElementById(id).style.backgroundColor = "rgb(0,191,255)";
     } else if (background == "rgb(0,191,255)") {
-        document.getElementById(id).style.background = "rgb(255, 255, 255)";
+        document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
     }
 }
 
-        //     /* Create style document */ 
-        //     var css = document.createElement('style'); 
-        //     css.type = 'text/css'; 
-          
-        //     if (css.styleSheet)  
-        //         css.styleSheet.cssText = styles; 
-        //     else  
-        //         css.appendChild(document.createTextNode(styles)); 
-              
-        //     /* Append style to the tag name */ 
-        //     document.getElementsByid(id)[0].appendChild(css);
-          
-        // /* Set the style */ 
-        // var styles = 'h2 { color: green }'; 
-        // // styles += ' body { text-align: center }'; 
+// for (var i = 1; i < 6; i++) {
+// 	const randomElement = spelers[Math.floor(Math.random() * spelers.length)];
+// 	console.log(randomElement)
+// 	document.getElementById("img" + i).src = randomElement[0];
+// 	document.getElementById("name" + i).innerHTML = randomElement[1];
+//     spelers.indexOf(randomElement);
+//     console.log(spelers.indexOf(randomElement));
+// }
