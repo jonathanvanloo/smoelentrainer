@@ -27,23 +27,8 @@ var spelers = [
 // make kopie van spelers in names (slice)
 
 //  zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
-// var i = 0;
-// while  (i <  0){
-// 	const randomElement = spelers[Math.floor(Math.random() * spelers.length)];
-// 	var een = document.createElement("img");
-// 	var twee = document.createElement("h2");
-// 	var drie = document.createTextNode(randomElement.name);
-// 	een.setAttribute("src", randomElement.image);
-// 	document.body.appendChild(een);
-// 	console.log(een);
-// 	console.log(twee);
-// 	console.log(drie);
-// 	twee.appendChild(drie);
-// 	document.body.appendChild(drie);
-// 	i++
-// }
-
-for (var i = 1; i < 6; i++) {
+var a = 1 ;
+while  (a < 6){
 	const randomElement = spelers[Math.floor(Math.random() * spelers.length)];
 	var een = document.createElement("img");
 	var twee = document.createElement("h2");
@@ -55,7 +40,8 @@ for (var i = 1; i < 6; i++) {
 	console.log(drie)
 	twee.appendChild(drie)
 	document.body.appendChild(drie);
-// }
+	a++;
+}
 
 // function click(id) {
 //     var background = document.getElementById(id).style.backgroundColor;
