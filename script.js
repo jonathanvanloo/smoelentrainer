@@ -22,7 +22,8 @@ var spelers = [
 {image: "img/2020-06-03 14_52_15-Selectie 2018 – 2019 – Feyenoord in Beeld.png", name: "Ramon ten Hove"},
 ];
 // make kopie van spelers in images (slice)
-var images = spelers.slice();
+var images = spelers.slice(0[1], 20[1]);
+console.log(images)
 // make kopie van spelers in names (slice)
 var names = spelers.slice();
 //  zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
