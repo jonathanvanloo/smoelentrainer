@@ -22,22 +22,36 @@ var spelers = [
 {image: "img/2020-06-03 14_52_15-Selectie 2018 – 2019 – Feyenoord in Beeld.png", name: "Ramon ten Hove"},
 ];
 // make kopie van spelers in images (slice)
-var images = spelers.slice(0[1], 20[1]);
-console.log(images)
-// make kopie van spelers in names (slice)
-var names = spelers.slice();
-//  zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
-while  (spelers.length > 0){
-	var index = Math.floor(Math.random() * spelers.length);
-	const randomElement = spelers[index];
-	var img = document.createElement("img");
-	var h2 = document.createElement("h2");
-	h2.innerHTML = randomElement.name
-	img.setAttribute("src", randomElement.image);
-	document.body.appendChild(img);
-	document.body.appendChild(h2);
-	dell = spelers.splice(index, 1);
+var images = [];
+var img = spelers.slice(0, 20);
+for (var i = 0; i < spelers.length; i++) {
+	images.push(img[i].image);
 }
+// make kopie van spelers in names (slice)
+var names = [];
+var naamen = spelers.slice(0, 20);
+for (var o = 0; o < spelers.length; o++) {
+	names.push(naamen[o].name);
+}
+
+//  zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
+while  (images.length > 0){
+	let index = Math.floor(Math.random() * images.length);
+	let randomElement = images[index];
+	var img = document.createElement("img");
+	img.setAttribute("src", randomElement);
+	document.body.appendChild(img);
+	images.splice(index, 1);
+};
+
+while  (names.length > 0){
+	let index2 = Math.floor(Math.random() * names.length);
+	const randomElement2 = names[index2];
+	var h2 = document.createElement("h2");
+	h2.innerHTML = randomElement2
+	document.body.appendChild(h2);
+	names.splice(index2, 1);
+};
 
 // function click(id) {
 //     var background = document.getElementById(id).style.backgroundColor;
