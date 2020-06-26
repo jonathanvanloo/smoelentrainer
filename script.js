@@ -23,15 +23,11 @@ var spelers = [
 ];
 // make kopie van spelers in images (slice)
 var images = [];
-var img = spelers.slice(0, 20);
-for (var i = 0; i < spelers.length; i++) {
-	images.push(img[i].image);
-}
-// make kopie van spelers in names (slice)
 var names = [];
-var naamen = spelers.slice(0, 20);
-for (var o = 0; o < spelers.length; o++) {
-	names.push(naamen[o].name);
+
+for (var i = 0; i < spelers.length; i++) {
+	images.push(spelers[i].image);
+	names.push(spelers[i].name);
 }
 
 //  zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
@@ -41,25 +37,27 @@ while  (images.length > 0){
 	var img = document.createElement("img");
 	img.setAttribute("src", randomElement);
 	document.body.appendChild(img);
+	img.id = 'img';
 	images.splice(index, 1);
 };
-
+var br = document.createElement("br");
 while  (names.length > 0){
 	let index2 = Math.floor(Math.random() * names.length);
 	const randomElement2 = names[index2];
 	var h2 = document.createElement("h2");
 	h2.innerHTML = randomElement2
 	document.body.appendChild(h2);
+	h2.id = 'h2';
 	names.splice(index2, 1);
 };
 
-// function click(id) {
-//     var background = document.getElementById(id).style.backgroundColor;
-//     document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
-//     // document.getElementById(id).style.borderColor = "black";
-//     if (background !== "rgb(0,191,255)") {
-//         document.getElementById(id).style.backgroundColor = "rgb(0,191,255)";
-//     } else if (background == "rgb(0,191,255)") {
-//         document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
-//     }
-// }
+function click(id) {
+    var background = document.getElementById(id).style.backgroundColor;
+    document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
+    // document.getElementById(id).style.borderColor = "black";
+    if (background !== "rgb(0,191,255)") {
+        document.getElementById(id).style.backgroundColor = "rgb(0,191,255)";
+    } else if (background == "rgb(0,191,255)") {
+        document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
+    }
+}
