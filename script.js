@@ -1,4 +1,3 @@
-
 var spelers = [
 {image: "img/2020-06-03 14_41_21-Selectie 2018 – 2019 – Feyenoord in Beeld.png", name: "Nicolai Jorgensen"},
 {image: "img/2020-06-03 14_43_03-Selectie 2018 – 2019 – Feyenoord in Beeld.png", name: "Robin van Persie"},
@@ -21,7 +20,9 @@ var spelers = [
 {image: "img/2020-06-03 14_51_47-Selectie 2018 – 2019 – Feyenoord in Beeld.png", name: "Kenneth Vermeer"},
 {image: "img/2020-06-03 14_52_15-Selectie 2018 – 2019 – Feyenoord in Beeld.png", name: "Ramon ten Hove"},
 ];
+
 // make kopie van spelers in images (slice)
+
 var images = [];
 var names = [];
 
@@ -31,6 +32,7 @@ for (var i = 0; i < spelers.length; i++) {
 }
 
 //  zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
+
 while  (images.length > 0){
 	let index = Math.floor(Math.random() * images.length);
 	let randomElement = images[index];
@@ -40,7 +42,9 @@ while  (images.length > 0){
 	img.id = 'img';
 	images.splice(index, 1);
 };
-var br = document.createElement("br");
+
+// var br = document.createElement("br");
+
 while  (names.length > 0){
 	let index2 = Math.floor(Math.random() * names.length);
 	const randomElement2 = names[index2];
@@ -51,13 +55,34 @@ while  (names.length > 0){
 	names.splice(index2, 1);
 };
 
-function click(id) {
-    var background = document.getElementById(id).style.backgroundColor;
-    document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
-    // document.getElementById(id).style.borderColor = "black";
-    if (background !== "rgb(0,191,255)") {
-        document.getElementById(id).style.backgroundColor = "rgb(0,191,255)";
-    } else if (background == "rgb(0,191,255)") {
-        document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("img").onclick = function() {imgFunction()};
+document.getElementById("img").style.color == "white"
+document.getElementById("h2").onclick = function() {h2Function()};
+document.getElementById("h2").style.color == "white"
+
+function imgFunction() {
+    if (document.getElementById("img").style.color == "white"){
+        document.getElementById("img").style.color = "blue";;
+    }else if(document.getElementById("img").style.color == "blue"){
+        document.getElementById("img").style.color = "white";;
     }
 }
+
+function imgFunction() {
+    if (document.getElementById("h2").style.color == "white"){
+        document.getElementById("h2").style.color = "blue";;
+    }else if(document.getElementById("h2").style.color == "white"){
+        document.getElementById("h2").style.color = "blue";;
+    }
+}
+
+// function click(id) {
+//     var background = document.getElementById(id).style.backgroundColor;
+//     document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
+//     // document.getElementById(id).style.borderColor = "black";
+//     if (background !== "rgb(0,191,255)") {
+//         document.getElementById(id).style.backgroundColor = "rgb(0,191,255)";
+//     } else if (background == "rgb(0,191,255)") {
+//         document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
+//     }
+// }
