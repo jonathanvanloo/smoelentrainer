@@ -40,6 +40,7 @@ while  (images.length > 0){
 	img.setAttribute("src", randomElement);
 	document.body.appendChild(img);
 	img.id = 'img';
+	img.className = "grid-item";
 	images.splice(index, 1);
 };
 
@@ -52,29 +53,30 @@ while  (names.length > 0){
 	h2.innerHTML = randomElement2
 	document.body.appendChild(h2);
 	h2.id = 'h2';
+	h2.className = "h2";
 	names.splice(index2, 1);
 };
 
-document.getElementById("img").onclick = function() {imgFunction()};
-document.getElementById("img").style.color == "white"
-document.getElementById("h2").onclick = function() {h2Function()};
-document.getElementById("h2").style.color == "white"
+// document.getElementById("img").onclick = function() {imgFunction()};
+// document.getElementById("img").style.color == "white"
+// document.getElementById("h2").onclick = function() {h2Function()};
+// document.getElementById("h2").style.color == "white"
 
-function imgFunction() {
-    if (document.getElementById("img").style.color == "white"){
-        document.getElementById("img").style.color = "blue";;
-    }else if(document.getElementById("img").style.color == "blue"){
-        document.getElementById("img").style.color = "white";;
-    }
-}
+// function imgFunction() {
+//     if (document.getElementById("img").style.color == "white"){
+//         document.getElementById("img").style.color = "blue";;
+//     }else if(document.getElementById("img").style.color == "blue"){
+//         document.getElementById("img").style.color = "white";;
+//     }
+// }
 
-function imgFunction() {
-    if (document.getElementById("h2").style.color == "white"){
-        document.getElementById("h2").style.color = "blue";;
-    }else if(document.getElementById("h2").style.color == "white"){
-        document.getElementById("h2").style.color = "blue";;
-    }
-}
+// function imgFunction() {
+//     if (document.getElementById("h2").style.color == "white"){
+//         document.getElementById("h2").style.color = "blue";;
+//     }else if(document.getElementById("h2").style.color == "white"){
+//         document.getElementById("h2").style.color = "blue";;
+//     }
+// }
 
 // function click(id) {
 //     var background = document.getElementById(id).style.backgroundColor;
