@@ -25,6 +25,7 @@ var spelers = [
 
 var images = [];
 var names = [];
+var counter = 0;
 
 for (var i = 0; i < spelers.length; i++) {
 	images.push(spelers[i].image);
@@ -39,12 +40,15 @@ while  (images.length > 0){
 	var img = document.createElement("img");
 	img.setAttribute("src", randomElement);
 	document.body.appendChild(img);
-	img.id = 'img';
-	img.className = "grid-item";
+	img.id = "img";
 	images.splice(index, 1);
 };
 
-// var br = document.createElement("br");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
 
 while  (names.length > 0){
 	let index2 = Math.floor(Math.random() * names.length);
@@ -52,39 +56,5 @@ while  (names.length > 0){
 	var h2 = document.createElement("h2");
 	h2.innerHTML = randomElement2
 	document.body.appendChild(h2);
-	h2.id = 'h2';
-	h2.className = "h2";
-	names.splice(index2, 1);
+	h2.id = 'h2';	names.splice(index2, 1);
 };
-
-// document.getElementById("img").onclick = function() {imgFunction()};
-// document.getElementById("img").style.color == "white"
-// document.getElementById("h2").onclick = function() {h2Function()};
-// document.getElementById("h2").style.color == "white"
-
-// function imgFunction() {
-//     if (document.getElementById("img").style.color == "white"){
-//         document.getElementById("img").style.color = "blue";;
-//     }else if(document.getElementById("img").style.color == "blue"){
-//         document.getElementById("img").style.color = "white";;
-//     }
-// }
-
-// function imgFunction() {
-//     if (document.getElementById("h2").style.color == "white"){
-//         document.getElementById("h2").style.color = "blue";;
-//     }else if(document.getElementById("h2").style.color == "white"){
-//         document.getElementById("h2").style.color = "blue";;
-//     }
-// }
-
-// function click(id) {
-//     var background = document.getElementById(id).style.backgroundColor;
-//     document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
-//     // document.getElementById(id).style.borderColor = "black";
-//     if (background !== "rgb(0,191,255)") {
-//         document.getElementById(id).style.backgroundColor = "rgb(0,191,255)";
-//     } else if (background == "rgb(0,191,255)") {
-//         document.getElementById(id).style.backgroundColor = "rgb(255, 255, 255)";
-//     }
-// }

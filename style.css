@@ -9,6 +9,7 @@ body {
 #img {
 	margin: 5px;
 	border: solid;
+	display: inline-grid;
 	width: 200px
 }
 
@@ -19,6 +20,6 @@ body {
 	border: solid;
 	border-color: black;
 	width: 350px;
-	display: inline-block;
+	display: inline-grid;
 }
 
