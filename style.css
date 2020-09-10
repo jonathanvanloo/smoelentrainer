@@ -4,13 +4,14 @@
 
 body {
 	background-image: url('img/groepfoto.png');
+	margin-top: 150PX;
 }
 
 #img {
 	margin: 5px;
 	border: solid;
 	display: inline-grid;
-	width: 200px
+	width: 170px
 }
 
 #h2 {
