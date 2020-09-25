@@ -5,9 +5,12 @@
 body {
 	background-image: url('img/groepfoto.png');
 	margin-top: 150PX;
+	margin-bottom: 150PX;
+	margin-left: 10PX;
+	margin-right: 10PX;
 }
 
-#img {
+.afb {
 	margin: 5px;
 	border: solid;
 	display: inline-grid;
@@ -24,3 +27,6 @@ body {
 	display: inline-grid;
 }
 
+#image-container {
+	margin-bottom: 100px;
+}

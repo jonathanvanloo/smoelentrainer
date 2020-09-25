@@ -32,23 +32,26 @@ for (var i = 0; i < spelers.length; i++) {
 	names.push(spelers[i].name);
 }
 
-//  zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
+// zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
+function displayimages() {
+	while  (images.length > 0 ){
+		let index = Math.floor(Math.random() * images.length);
+		let randomElement = images[index];
+		var img = document.createElement("img");
+		img.setAttribute("src", randomElement);
+		document.getElementById("image-container").appendChild(img);
+		img.id = "img" + counter;
+		img.className = "afb";
+		document.getElementById("img" + counter).addEventListener("click", selectImg);
+	    counter++;
+		images.splice(index, 1);
+	};
+}
 
-while  (images.length > 0){
-	let index = Math.floor(Math.random() * images.length);
-	let randomElement = images[index];
-	var img = document.createElement("img");
-	img.setAttribute("src", randomElement);
-	document.body.appendChild(img);
-	img.id = "img";
-	images.splice(index, 1);
-};
-
-document.write("<br>");
-document.write("<br>");
-document.write("<br>");
-document.write("<br>");
-document.write("<br>");
+function selectImg() {
+	alert ("Hello World!" + counter);
+	// document.getElementById("img").style.border = "thick solid blue";
+}
 
 while  (names.length > 0){
 	let index2 = Math.floor(Math.random() * names.length);
@@ -56,5 +59,14 @@ while  (names.length > 0){
 	var h2 = document.createElement("h2");
 	h2.innerHTML = randomElement2
 	document.body.appendChild(h2);
-	h2.id = 'h2';	names.splice(index2, 1);
+	h2.id = 'h2';
+	h2.addEventListener("click", myFunction2);
+	names.splice(index2, 1);
 };
+
+
+function myFunction2() {
+  alert ("Hello World!");
+}
+
+displayimages();
