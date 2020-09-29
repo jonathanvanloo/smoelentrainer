@@ -25,7 +25,9 @@ var spelers = [
 
 var images = [];
 var names = [];
-var counter = 0;
+var imageRow = [];
+var nameRow = [];
+
 
 for (var i = 0; i < spelers.length; i++) {
 	images.push(spelers[i].image);
@@ -33,40 +35,44 @@ for (var i = 0; i < spelers.length; i++) {
 }
 
 // zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
-function displayimages() {
+function displayImages() {
 	while  (images.length > 0 ){
 		let index = Math.floor(Math.random() * images.length);
-		let randomElement = images[index];
+		let randomImage = images[index];
 		var img = document.createElement("img");
-		img.setAttribute("src", randomElement);
+		img.setAttribute("src", randomImage);
 		document.getElementById("image-container").appendChild(img);
-		img.id = "img" + counter;
+		img.id = "img";
 		img.className = "afb";
-		document.getElementById("img" + counter).addEventListener("click", selectImg);
-	    counter++;
+	    imageRow.push(randomImage);
+		img.addEventListener("click", function() {
+		alert ("Hello World!" + imageRow[randomImage]);
+		});
 		images.splice(index, 1);
 	};
 }
 
-function selectImg() {
-	alert ("Hello World!" + counter);
+// function selectImg() {
 	// document.getElementById("img").style.border = "thick solid blue";
+// }
+
+function displayName() {
+	while  (names.length > 0){
+		let index2 = Math.floor(Math.random() * names.length);
+		const randomName = names[index2];
+		var name = document.createElement("h2");
+		name.innerHTML = randomName
+		document.getElementById("name-container").appendChild(name);
+		name.id = 'name';
+		name.addEventListener("click", myFunction2);
+	    nameRow.push(randomName);
+		names.splice(index2, 1);
+	};
 }
-
-while  (names.length > 0){
-	let index2 = Math.floor(Math.random() * names.length);
-	const randomElement2 = names[index2];
-	var h2 = document.createElement("h2");
-	h2.innerHTML = randomElement2
-	document.body.appendChild(h2);
-	h2.id = 'h2';
-	h2.addEventListener("click", myFunction2);
-	names.splice(index2, 1);
-};
-
 
 function myFunction2() {
   alert ("Hello World!");
 }
 
-displayimages();
+displayImages();
+displayName()
