@@ -27,7 +27,7 @@ var images = [];
 var names = [];
 var imageRow = [];
 var nameRow = [];
-
+var indexArrayImg = []
 
 for (var i = 0; i < spelers.length; i++) {
 	images.push(spelers[i].image);
@@ -36,21 +36,28 @@ for (var i = 0; i < spelers.length; i++) {
 
 // zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
 function displayImages() {
+		restartLoop:
 	while  (images.length > 0 ){
 		let index = Math.floor(Math.random() * images.length);
 		let randomImage = images[index];
 		var img = document.createElement("img");
+		// if (indexArrayImg.includes(index)) {
+		// 	continue restartLoop
+		// }
+		// indexArrayImg.push(index)
 		img.setAttribute("src", randomImage);
 		document.getElementById("image-container").appendChild(img);
 		img.id = "img";
 		img.className = "afb";
+		img.setAttribute("data-spelerNaam", names[index])
 	    imageRow.push(randomImage);
 		img.addEventListener("click", function() {
-		alert ("Hello World!" + imageRow[randomImage]);
+			console.log (event.target /*imageRow[randomImage]*/);
 		});
 		images.splice(index, 1);
 	};
 }
+		console.log(indexArrayImg)
 
 // function selectImg() {
 	// document.getElementById("img").style.border = "thick solid blue";
