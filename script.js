@@ -39,12 +39,16 @@ function displayImages() {
 		restartLoop:
 	while  (images.length > 0 ){
 		let index = Math.floor(Math.random() * images.length);
-		let randomImage = images[index];
 		var img = document.createElement("img");
-		// if (indexArrayImg.includes(index)) {
-		// 	continue restartLoop
-		// }
-		// indexArrayImg.push(index)
+		let randomImage = images[index];
+		if (indexArrayImg.includes(index)) {
+			indexArrayImg.splice(index, 1);
+			console.log(index + "	" + indexArrayImg)
+			indexArrayImg.splice(index, 1);
+			console.log(index + "	" + indexArrayImg)
+			continue restartLoop
+		}
+		indexArrayImg.push(index)
 		img.setAttribute("src", randomImage);
 		document.getElementById("image-container").appendChild(img);
 		img.id = "img";
@@ -57,7 +61,8 @@ function displayImages() {
 		images.splice(index, 1);
 	};
 }
-		console.log(indexArrayImg)
+
+console.log(indexArrayImg)
 
 // function selectImg() {
 	// document.getElementById("img").style.border = "thick solid blue";
