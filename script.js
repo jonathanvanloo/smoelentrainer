@@ -36,18 +36,16 @@ for (var i = 0; i < spelers.length; i++) {
 
 // zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
 function displayImages() {
-		restartLoop:
+		// restartLoop:
 	while  (images.length > 0 ){
 		let index = Math.floor(Math.random() * images.length);
 		var img = document.createElement("img");
 		let randomImage = images[index];
-		if (indexArrayImg.includes(index)) {
-			indexArrayImg.splice(index, 1);
-			console.log(index + "	" + indexArrayImg)
-			indexArrayImg.splice(index, 1);
-			console.log(index + "	" + indexArrayImg)
-			continue restartLoop
-		}
+		// if (indexArrayImg.includes(index)) {
+		// 	indexArrayImg.splice(index, 1);
+		// 	console.log(index + "	" + indexArrayImg)
+		// 	continue restartLoop
+		// }
 		indexArrayImg.push(index)
 		img.setAttribute("src", randomImage);
 		document.getElementById("image-container").appendChild(img);
