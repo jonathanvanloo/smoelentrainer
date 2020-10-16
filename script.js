@@ -36,35 +36,31 @@ for (var i = 0; i < spelers.length; i++) {
 
 // zolang images nog een element bevat: vul ee element met een image, verwijder daarna ook de image uit images
 function displayImages() {
-		// restartLoop:
+		var teller = 0
 	while  (images.length > 0 ){
 		let index = Math.floor(Math.random() * images.length);
 		var img = document.createElement("img");
 		let randomImage = images[index];
-		// if (indexArrayImg.includes(index)) {
-		// 	indexArrayImg.splice(index, 1);
-		// 	console.log(index + "	" + indexArrayImg)
-		// 	continue restartLoop
-		// }
 		indexArrayImg.push(index)
 		img.setAttribute("src", randomImage);
 		document.getElementById("image-container").appendChild(img);
-		img.id = "img";
+		teller++;
+		img.id = "img" + teller;
 		img.className = "afb";
 		img.setAttribute("data-spelerNaam", names[index])
 	    imageRow.push(randomImage);
-		img.addEventListener("click", function() {
-			console.log (event.target /*imageRow[randomImage]*/);
-		});
+		img.addEventListener("click", selectImg(teller));
 		images.splice(index, 1);
 	};
 }
 
-console.log(indexArrayImg)
-
-// function selectImg() {
-	// document.getElementById("img").style.border = "thick solid blue";
-// }
+function selectImg(teller) {
+	return function(){
+	console.log("img" + teller)
+	document.getElementById("img" + teller).style.visibility = "hidden";
+	// document.getElementById("img" + teller).style.border = "thick solid blue";
+}
+}
 
 function displayName() {
 	while  (names.length > 0){
