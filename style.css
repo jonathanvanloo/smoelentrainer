@@ -13,11 +13,12 @@ body {
 .afb {
 	margin: 5px;
 	border: solid;
+	border-color: black;
 	display: inline-grid;
 	width: 170px
 }
 
-#name {
+.naam {
 	background-color: white;
 	color: red;
 	margin: 5px;
@@ -34,4 +35,19 @@ body {
 
 #name-container {
 	margin-top: 100px;
+}
+
+#progressBarrContainer {
+  	width: 80%;
+  	background-color: #ddd;
+	border: solid;
+	border-color: black;
+	margin: auto;
+  	margin-top: 50px;
+}
+
+#progressBarr {
+  	width: 0%;
+  	height: 20px;
+  	background-color: #4CAF50;
 }
